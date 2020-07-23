@@ -1,0 +1,240 @@
+/*
+- Mobile: 375px
+- Desktop: 1440px
+*/
+:root {
+
+    --pale-violet: hsl(276, 100%, 81%); /* sub-heading at the top of the app UI */
+    --moderate-violet: hsl(276, 55%, 52%); /* (chat on the left) */
+    --desaturated-dark-violet: hsl(271, 15%, 43%);  /* (chat on the right) */
+    --light-violet-bg: hsl(274deg 42% 93%); 
+    --grayish-blue: hsl(206, 6%, 79%); /*  (placeholder text):  */
+    --very-dark-desaturated-violet: hsl(271, 36%, 24%); /* (main heading) and  (submit button background): */
+    --dark-grayish-violet: hsl(270, 7%, 64%); /*  (paragraph): */
+
+    /* These two colors are the vibrant background colors you see throughout the design and are applied as a linear gradient: */
+    --light-magenta: hsl(293, 100%, 63%);
+    --light-violet: hsl(264, 100%, 61%);
+
+    --white: hsl(0, 0%, 100%);
+    --light-grayish-violet: hsl(270, 20%, 96%); /*  (app background) */
+    --very-light-magenta: hsl(289, 100%, 72%); /*  (radio button outline) */
+
+}
+html {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-size: 16px;
+    font-family: 'Rubik', sans-serif; /* 400, 500, 700 */
+    background-color: var(--light-grayish-violet);
+    height: 100vh;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+}
+.bg-color {
+    height: 1000px;
+    width: 50%;
+    border-top-right-radius: 0;
+    border-top-left-radius: 0;
+    border-bottom-right-radius: 500px;
+    border-bottom-left-radius: 0;
+    background: linear-gradient(0deg, var(--light-violet), var(--light-magenta));
+    position: absolute;
+    top: -60%;
+    left: 0;
+    z-index: -1;
+}
+main {
+    text-align: center;
+    padding: 15px;
+}
+
+main h1 {
+    color: var(--very-dark-desaturated-violet);
+    font-size: 2.5rem;
+    font-weight: 500;
+}
+
+main p {
+    color: var(--dark-grayish-violet);
+    line-height: 1.5;
+    font-size: 1.2rem;
+    font-weight: 400;
+}
+
+.device-block {
+    background-color: var(--white);
+    width: 250px;
+    height: auto;
+    border-radius: 20px;
+    text-align: center;
+    padding: 10px;
+    margin: 4rem 0;
+    box-shadow: 1px 5px 10px #ddd;
+    
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.device {
+    text-align: left;
+    background-color: var(--light-grayish-violet);
+    border-radius: 20px;
+}
+.device .header-device-block {
+    text-align: center;
+    position: relative;
+}
+.device .header-device {
+    background-color: var(--white);
+    border-top-left-radius: 0;
+    border-top-right-radius: 0;
+    border-bottom-left-radius: 40px;
+    border-bottom-right-radius: 40px;
+    width: 200px;
+    height: 20px;
+    z-index: 2;
+    position: absolute;
+    margin: 0 auto;
+    right: 10px;
+    left: 10px;
+}
+
+.device .header {
+    background: linear-gradient(45deg, var(--light-violet), var(--light-magenta));
+    color: var(--white);
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+    border-bottom-left-radius: 0;
+    border-bottom-right-radius: 0;
+    padding: 15px 10px 0 10px;
+}
+.device .header .user-info {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+.device .header .user-info .user-name {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    margin-left: 5px;
+    font-size: .8rem;
+}
+.device .header .user-info .user-name .user-status {
+    font-weight: 400;
+    font-size: .6rem;
+}
+
+.device .header .avatar {
+    border-radius: 50px;
+    width: 30px;
+    border: 1px solid var(--white);
+}
+
+.device .content {
+    display: flex;
+    flex-direction: column;
+    padding: 10px;
+}
+
+.device .message {
+    border-radius: 20px;
+    padding: 10px;
+    margin-bottom: 1rem;
+    max-width: 60%;
+    font-size: .6rem;
+}
+.device .message.receive {
+    background-color: var(--light-violet-bg);
+    color: var(--moderate-violet);
+    border-bottom-left-radius: 5px;
+}
+
+.device .message.receive.question {
+    background: linear-gradient(45deg, var(--light-violet), var(--light-magenta));
+    color: var(--white);
+}
+
+.device .message.receive.question label span {
+    font-weight: 700;
+    float: right;
+}
+
+.device .message.send {
+   background-color: var(--white);
+   color: var(--desaturated-dark-violet);
+   text-align: right;
+   display: flex;
+   align-self: flex-end;
+   border-bottom-right-radius: 5px;
+   box-shadow: 1px 3px 3px #ddd;
+}
+
+.device .image-sent {
+    border-radius: 15px;
+    max-width: 50px;
+    margin-left: 5px;
+}
+.device .images {
+    background-color: transparent;
+    box-shadow: none;
+    padding: 0 5px;
+
+    text-align: right;
+   display: flex;
+   align-self: flex-end;
+}
+.device .input-radio {
+    border: 1px solid red;
+    border-radius: 50px;
+    height: 10px;
+    width: 10px;
+    
+}
+
+.device .write-message {
+    width: 100%;
+    display: flex;
+    position: relative;
+}
+.device .write-message  input {
+    border-radius: 50px;
+    border: none;
+    padding: 20px;
+    width: 100%;
+}
+
+.device .write-message input::placeholder {
+    color: var(--grayish-blue);
+}
+
+.device .write-message  button {
+    background-color: var(--very-dark-desaturated-violet);
+    color: var(--white);
+    border: none;
+    border-radius: 50px;
+    width: 40px;
+    height: 40px;
+    font-size: 1rem;
+    font-weight: 700;
+
+    position: absolute;
+    right: 5px;
+    bottom: 8px;
+}
+
+.attribution { font-size: 11px; text-align: center; color: var(--very-dark-desaturated-violet) }
+.attribution a { color: var(--light-violet); text-decoration: none; }
