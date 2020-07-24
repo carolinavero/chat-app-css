@@ -17,4 +17,4 @@ Your users should be able to:
 
 ## Deploying the project
 
-[Deploy in Vercel]()
+[Deploy in Vercel](https://chat-app-css-nine.vercel.app/)
