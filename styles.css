@@ -121,6 +121,13 @@ main p {
     border-bottom-right-radius: 0;
     padding: 15px 10px 0 10px;
 }
+.device .header .header-left {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}
+
 .device .header .user-info {
     display: flex;
     flex-direction: row;
@@ -136,11 +143,12 @@ main p {
 .device .header .user-info .user-name .user-status {
     font-weight: 400;
     font-size: .6rem;
+    color: var(--pale-violet);
 }
 
 .device .header .avatar {
     border-radius: 50px;
-    width: 30px;
+    width: 24px;
     border: 1px solid var(--white);
 }
 
@@ -165,12 +173,31 @@ main p {
 
 .device .message.receive.question {
     background: linear-gradient(45deg, var(--light-violet), var(--light-magenta));
-    color: var(--white);
+    color: var(--pale-violet);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
 }
 
-.device .message.receive.question label span {
+.device .message.receive.question span {
     font-weight: 700;
     float: right;
+     color: var(--white);
+}
+.device .message.receive.question .question-info {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.device .message.receive.question .question-info > div {
+    margin-right: 5px;
+}
+.arrow-right,
+.arrow-left {
+    max-height: 15px;
+}
+.img-menu {
+    max-height: 10px;
 }
 
 .device .message.send {
@@ -198,11 +225,11 @@ main p {
    align-self: flex-end;
 }
 .device .input-radio {
-    border: 1px solid red;
+    border: 1px solid var(--very-light-magenta);
     border-radius: 50px;
     height: 10px;
     width: 10px;
-    
+    display: inline-flex;
 }
 
 .device .write-message {
@@ -234,6 +261,7 @@ main p {
     position: absolute;
     right: 5px;
     bottom: 8px;
+    line-height: 2.8;
 }
 
 .attribution { font-size: 11px; text-align: center; color: var(--very-dark-desaturated-violet) }
