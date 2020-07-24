@@ -117,8 +117,8 @@ main p {
     justify-content: space-between;
     border-top-left-radius: 20px;
     border-top-right-radius: 20px;
-    border-bottom-left-radius: 0;
-    border-bottom-right-radius: 0;
+    border-bottom-left-radius: 6px;
+    border-bottom-right-radius: 6px;
     padding: 15px 10px 0 10px;
 }
 .device .header .header-left {
@@ -172,7 +172,7 @@ main p {
 }
 
 .device .message.receive.question {
-    background: linear-gradient(45deg, var(--light-violet), var(--light-magenta));
+    background: linear-gradient(270deg, var(--light-violet), var(--light-magenta));
     color: var(--pale-violet);
     display: flex;
     align-items: center;
@@ -198,6 +198,10 @@ main p {
 }
 .img-menu {
     max-height: 10px;
+}
+
+.separator {
+    height: 15px;
 }
 
 .device .message.send {
@@ -264,5 +268,57 @@ main p {
     line-height: 2.8;
 }
 
-.attribution { font-size: 11px; text-align: center; color: var(--very-dark-desaturated-violet) }
-.attribution a { color: var(--light-violet); text-decoration: none; }
+
+@media(min-width: 600px) {
+    body {
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-around;
+    }
+    .bg-color {
+        width: 36%;
+        top: -40%;
+        left: -100px;
+        border-bottom-left-radius: 500px;
+    }
+    .container {
+        width: 40%;
+    }
+    .device-block {
+       float: right;
+    }
+    .device {
+        max-width: 250px;
+    }
+    main {
+        width: 40%;
+        text-align: left;
+        margin-right: 8rem;
+    }
+    main p {
+        font-size: 1.1rem;
+        line-height: 1.8;
+    }
+
+    .device .message {
+        border-radius: 8px;
+        margin-bottom: .5rem;
+    }
+
+    .device .images {
+        margin-bottom: .5rem;
+    }
+
+    .device .write-message input {
+        padding: 10px 15px;
+        font-size: 11px;
+    }
+
+    .device .write-message button {
+        width: 26px;
+        height: 26px;
+        font-size: 0;
+        right: 4px;
+        bottom: 3px;
+    }
+}
