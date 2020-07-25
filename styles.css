@@ -245,6 +245,7 @@ main p {
     text-align: right;
    display: flex;
    align-self: flex-end;
+   margin-bottom: .5rem;
 }
 .device .input-radio {
     border: 1px solid var(--very-light-magenta);
